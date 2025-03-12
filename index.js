@@ -20,7 +20,8 @@ app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 const corsOptions = {
     origin:"https://job-portal-frontend-pearl-nine.vercel.app",
-    credentials:true
+    credentials:true,
+    allowedHeaders: ["Content-Type", "Authorization"]
 }
 app.use(cors(corsOptions));
 
